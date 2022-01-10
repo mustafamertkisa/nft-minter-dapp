@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  color: #0ab2da;
+  margin-bottom: 20px;
+}
+
+.header a {
+  text-decoration: none;
+  color: #0ab2da;
+}
+
+#coverImage {
+  float: left;
+  width: 100px;
+}
+
+#connectButton {
+  float: right;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#imageNft {
+  width: 200px;
+  height: 200px;
+  margin-left: 40px;
+  border: gray;
+  border-style: groove;
+  border-radius: 10px;
+}
+
+#mintNftButton {
+  float: right;
+  width: 200px;
+}
