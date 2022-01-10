@@ -83,8 +83,7 @@ const Home = () => {
         text: 'All fields must be filled.',
       })
     } else {
-      console.log("dolu")
-      //pinJSONToIPFS(metaData);
+      pinJSONToIPFS(metaData);
     }
   }
 
