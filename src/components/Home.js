@@ -14,21 +14,21 @@ import {
   Input,
 } from "reactstrap";
 import { pinJSONToIPFS } from "../connections/Pinata";
-import { address } from "../connections/Connect";
+import Swal from 'sweetalert2'
 import "../App.css";
 
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
 const Home = () => {
-  const [wallet, setWallet] = useState("");
+  const [walletAddress, setWallet] = useState("");
   const [name, setName] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
   const connectWalletPressed = async () => {
-    await connectWallet();
-    setWallet(address);
+    const walletResponse = await connectWallet();
+    setWallet(walletResponse.address);
   };
 
   async function nameOnChange(e) {
@@ -70,15 +70,22 @@ const Home = () => {
   }
 
   let metaData = {
-      name: {name},
-      image: {fileUrl},
-      description: {description},
-      price: {price}
-  }
+    name: { name },
+    image: { fileUrl },
+    description: { description },
+    price: { price },
+  };
 
   async function mintButton() {
-    console.log(metaData);
-    pinJSONToIPFS(metaData);
+    if (name == "" || fileUrl == "" || description == "" || price == "") {
+      Swal.fire({
+        icon: 'error',
+        text: 'All fields must be filled.',
+      })
+    } else {
+      console.log("dolu")
+      //pinJSONToIPFS(metaData);
+    }
   }
 
   return (
@@ -113,7 +120,14 @@ const Home = () => {
               outline
               onClick={connectWalletPressed}
             >
-              {wallet.length <= 0 ? "Connect Wallet" : wallet}
+              {walletAddress.length > 0 ? (
+                "Connected: " +
+                String(walletAddress).substring(0, 6) +
+                "..." +
+                String(walletAddress).substring(38)
+              ) : (
+                <span>Connect Wallet</span>
+              )}
             </Button>
           </Col>
         </Row>
