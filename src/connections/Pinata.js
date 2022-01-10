@@ -16,9 +16,7 @@ export const pinJSONToIPFS = (JSONBody) => {
             }
         })
         .then(function (response) {
-            console.log(response.data["IpfsHash"]);
             metadataKey = response.data["IpfsHash"];
-            console.log(metadataKey);
             mintNft();
         })
         .catch(function (error) {
