@@ -19,6 +19,7 @@ import "../App.css";
 
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
+export let imageUrl = null;
 const Home = () => {
   const [walletAddress, setWallet] = useState("");
   const [name, setName] = useState("");
@@ -46,6 +47,7 @@ const Home = () => {
       const added = await client.add(file);
       const url = `https://ipfs.infura.io/ipfs/${added.path}`;
       setFileUrl(url);
+      imageUrl = url;
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -214,7 +216,7 @@ const Home = () => {
           </Col>
         </Row>
         <br />
-        <Button id="mintNftButton" color="success" onClick={mintButton}>
+        <Button id="mintNftButton" color="success" disabled={walletAddress == "" ? true : false} onClick={mintButton}>
           Mint
         </Button>
       </div>
