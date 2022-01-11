@@ -13,5 +13,6 @@ With this application you can easily create NFTs. Your images and metadata are s
 - webpack @4.44.2
 - react-scripts @4.0.3
 
+#### The contract has been deployed to the *Ethereum Rinkeby Testnet*
 #### *npm install* downloads required packages
 #### *npm run start* starts the application
