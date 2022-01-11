@@ -160,7 +160,7 @@ const Home = () => {
                   </Col>
 
                   <Col sm="3">
-                    <img id="imageNft" src={fileUrl} width="600px" />
+                    <img id="imageNft" src={fileUrl == "" ? "https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png" : fileUrl} width="600px" />
                   </Col>
                 </Row>
               </CardText>
