@@ -171,7 +171,7 @@ const Home = () => {
         <Row>
           <Col sm="12">
             <Card body>
-              <CardTitle tag="h5">Meta Data</CardTitle>
+              <CardTitle tag="h5">Metadata</CardTitle>
               <br />
               <CardText>
                 <Row>
