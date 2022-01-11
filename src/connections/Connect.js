@@ -39,7 +39,6 @@ export const mintNft = async () => {
     .createToken(metadataKey)
     .send({ from: address }, function (err, resp) {
       if (!err) {
-        console.log(resp);
         Swal.fire({
           icon: "success",
           text: "Your transaction is successful.",
