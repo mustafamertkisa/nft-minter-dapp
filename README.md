@@ -1,3 +1,4 @@
+
 # NFT Minter dApp
 
 With this application you can easily create NFTs. Your images and metadata are stored with IPFS. Pinata was used to save metadata to IPFS. The interface is made with React.
@@ -16,7 +17,12 @@ With this application you can easily create NFTs. Your images and metadata are s
 
 ![minter-homepage](https://imgyukle.com/f/2022/01/12/ojIS8e.png)
 
+## Pinata API keys are kept with .env file
+
+-Create and add .env file in main folder
+- REACT_APP_PINATA_KEY = your-pinata-api-key
+- REACT_APP_PINATA_SECRET = your-pinata-api-secret
+
 #### The contract has been deployed to the *Ethereum Rinkeby Testnet*
-#### Pinata api keys are kept with *.env* file
 #### *npm install* downloads required packages
 #### *npm run start* starts the application
