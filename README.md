@@ -4,9 +4,10 @@ With this application you can easily create NFTs. Your images and metadata are s
 
 # Packages Used
 
-- reactstrap
-- ipfs-http-client
+- reactstrapt
 - bootstrap
+- ipfs-http-clien
+- dotenv
 - axios
 - web3
 - sweetalert2
@@ -16,5 +17,6 @@ With this application you can easily create NFTs. Your images and metadata are s
 ![minter-homepage](https://imgyukle.com/f/2022/01/12/ojIS8e.png)
 
 #### The contract has been deployed to the *Ethereum Rinkeby Testnet*
+#### Pinata api keys are kept with .env file
 #### *npm install* downloads required packages
 #### *npm run start* starts the application
