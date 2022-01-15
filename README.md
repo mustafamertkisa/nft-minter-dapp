@@ -19,7 +19,7 @@ With this application you can easily create NFTs. Your images and metadata are s
 
 ## Pinata API keys are kept with .env file
 
--Create and add .env file in main folder
+Create and add .env file in main folder
 - REACT_APP_PINATA_KEY = your-pinata-api-key
 - REACT_APP_PINATA_SECRET = your-pinata-api-secret
 
